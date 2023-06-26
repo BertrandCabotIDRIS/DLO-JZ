@@ -395,6 +395,8 @@ def train():                                                                    
         if idr_torch.rank == 0:                                                                                #
             print(">>> Number of batch per epoch: {}".format(N_batch))                                         # 
             print(f'Max Memory Allocated {torch.cuda.max_memory_allocated()} Bytes')                           #
+        else:                                                                                                  #
+            print(f'MaxMemory for GPU:{idr_torch.rank} {torch.cuda.max_memory_allocated()} Bytes')             #
 #***************************************************************************************************************
 
         
